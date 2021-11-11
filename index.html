@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodgrove Dashboard</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body ng-app="woodgrove">
+    <header ng-include="'assets/include/header.html'"></header>
+    <div class="sidebar" ng-include="'assets/include/sidebar.html'"></div>
+    <main ng-view></main>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/lib/angular/angular.min.js"></script>
+    <script src="assets/lib/angular/angular-animate.min.js"></script>
+    <script src="assets/lib/angular/angular-route.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html> 

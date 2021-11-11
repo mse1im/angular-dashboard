@@ -1,0 +1,16 @@
+.sidebar {
+    position: fixed;
+    top: 51px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: var(--white);
+    width: 220px;
+    box-shadow: 0px 3px 17px var(--sidebar-shadow);
+    padding-left: 26px;
+}
+
+.open {
+    width: 68px;
+}

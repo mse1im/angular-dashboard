@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito+Sans:wght@900&display=swap');
+@import url('reset.css');
+@import url('variables.css');
+@import url('header.css');
+@import url('sidebar.css');
+
+main {
+    position: relative;
+    left: 220px;
+    width: calc(100% - 220px);
+
+    &.ng-enter {
+        transition:0.5s linear all;
+        opacity:0;
+
+        &.ng-enter-active {
+            opacity: 1;
+        }
+    }
+
+    .home,
+    .profit,
+    .customer,
+    .transaction {
+        width: 100%;
+    }
+
+    .tabs {
+        margin-top: 25px;
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                a {
+                    color: var(--black);
+                }
+
+                &:not(:last-child) {
+                    margin-right: 44px;
+                }
+
+                &.active {
+
+                    a {
+                        color: #F86B00;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            height: 3px;
+                            width: 100%;
+                            top: 27px;
+                            position: absolute;
+                            background-color: #F86B00;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.exp {
+     left: 68px;
+     width: calc(100% - 68px);
+}
