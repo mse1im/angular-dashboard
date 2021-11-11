@@ -1,8 +1,10 @@
 window.addEventListener("load", () => {
     let hamburgerMenu = document.querySelector(".hamburger-menu");
     let sideBar = document.querySelector(".sidebar");
-    let brandName = document.querySelector(".brand-name");
+    let brandName = document.querySelector(".logo");
     let main = document.querySelector("main");
+    let navElement = document.querySelector("nav").children[0].children;
+    let subMenu = document.querySelector(".submenu");
     
     /* hamburger-menu */
     hamburgerMenu.addEventListener("click", () => {
@@ -22,4 +24,20 @@ window.addEventListener("load", () => {
         }
     })
 
+    /* open-menu */
+    for (let i = 0; i < navElement.length; i++) {
+        navElement[i].addEventListener("click", () => {
+            if (navElement[i].children[1] != undefined) {
+                if (!navElement[i].children[1].classList.contains("d-block")) {
+                    subMenu.classList.add("d-block");
+                    navElement[i].classList.add("active");
+                    navElement[i].classList.add("open")
+                }else {
+                    subMenu.classList.remove("d-block");
+                    navElement[i].classList.remove("active");
+                    navElement[i].classList.remove("open")
+                }
+            }
+        })
+    }
 })

@@ -7,6 +7,13 @@ main {
   position: relative;
   left: 220px;
   width: calc(100% - 220px);
+  height: 100%;
+  top: 50px;
+}
+
+main.exp {
+  left: 68px;
+  width: calc(100% - 68px);
 }
 
 main.ng-enter {
@@ -24,10 +31,36 @@ main .profit,
 main .customer,
 main .transaction {
   width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media screen and (max-width: 991px) {
+  main .home,
+  main .profit,
+  main .customer,
+  main .transaction {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 main .tabs {
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 main .tabs ul {
@@ -62,8 +95,157 @@ main .tabs ul li.active a::after {
   left: 0;
 }
 
-.exp {
-  left: 68px;
-  width: calc(100% - 68px);
+main .container {
+  margin: 40px;
+}
+
+main .container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .container .box li {
+  height: 190px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: 1px solid;
+  -webkit-box-shadow: 0px 0px 20px #E2E3EA;
+          box-shadow: 0px 0px 20px #E2E3EA;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container .box li:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+main .container .box li:not(:last-child) {
+  margin-right: 30px;
+}
+
+main .container .box li:nth-child(1) {
+  border-color: #F86B00;
+}
+
+main .container .box li:nth-child(2) {
+  border-color: #FEC52F;
+}
+
+main .container .box li:nth-child(3) {
+  border-color: #1665DB;
+}
+
+main .container .box li:nth-child(4) {
+  border-color: #35C535;
+}
+
+main .container .box li .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+main .container .box li .head .icon {
+  margin: 0 12px 0 0;
+}
+
+main .container .box li .content {
+  text-align: end;
+}
+
+@media screen and (max-width: 991px) {
+  main .container .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container .box li {
+    margin: 30px 0 0 0;
+  }
+  main .container .box li:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+
+main .container .box-lg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .box-lg li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-shadow: 0px 0px 20px #E2E3EA;
+          box-shadow: 0px 0px 20px #E2E3EA;
+  border: 1px solid #D8D8D8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+main .container .box-lg li:not(:last-child) {
+  margin-right: 30px;
+}
+
+main .container .box-lg li .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+main .container .box-lg li .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .box-lg li .img span {
+  margin-right: 20px;
+  text-orientation: upright;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  letter-spacing: -5px;
+}
+
+@media screen and (max-width: 991px) {
+  main .container .box-lg {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container .box-lg li {
+    margin: 30px 0 0 0;
+  }
+  main .container .box-lg li:not(:last-child) {
+    margin-right: 0px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

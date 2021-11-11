@@ -1,18 +1,205 @@
 .sidebar {
   position: fixed;
-  top: 51px;
+  top: 49px;
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: auto;
   background-color: var(--white);
   width: 220px;
   -webkit-box-shadow: 0px 3px 17px var(--sidebar-shadow);
           box-shadow: 0px 3px 17px var(--sidebar-shadow);
-  padding-left: 26px;
+  padding: 25px;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  z-index: 9;
+  border: 1px solid #ADB3C4;
 }
 
-.open {
+.sidebar.open {
   width: 68px;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.sidebar.open .search input[type='text'] {
+  border: none;
+  border-bottom: 1px solid #ADB3C4;
+  border-radius: 0;
+}
+
+.sidebar.open .search input[type='text']::-webkit-input-placeholder {
+  display: none;
+}
+
+.sidebar.open .search input[type='text']:-ms-input-placeholder {
+  display: none;
+}
+
+.sidebar.open .search input[type='text']::-ms-input-placeholder {
+  display: none;
+}
+
+.sidebar.open .search input[type='text']::placeholder {
+  display: none;
+}
+
+.sidebar.open .search label {
+  left: 50%;
+}
+
+.sidebar.open nav ul li {
+  position: relative;
+}
+
+.sidebar.open nav ul li a::after {
+  display: none;
+}
+
+.sidebar.open nav ul li a span {
+  display: none;
+}
+
+.sidebar.open nav ul li a span.icon {
+  display: block;
+}
+
+.sidebar.open nav ul li:hover .submenu {
+  opacity: 1;
+  width: 240px;
+  -webkit-box-shadow: 0px 3px 17px #adb3c480;
+          box-shadow: 0px 3px 17px #adb3c480;
+  border-left: 2px solid #ADB3C480;
+  height: auto;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sidebar.open nav ul li .submenu {
+  opacity: 0;
+  border-left: 2px solid #ADB3C480;
+  position: absolute;
+  width: 240px;
+  left: 50px;
+  top: 0;
+  background-color: white;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.sidebar.open nav ul li .submenu::before {
+  content: "";
+  display: block;
+  width: 0px;
+  z-index: 10;
+  height: 0px;
+  border-width: 10px;
+  border-style: solid;
+  -o-border-image: initial;
+     border-image: initial;
+  border-top-color: transparent;
+  border-right-color: white;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  margin-left: -2rem;
+}
+
+.sidebar .search {
+  position: relative;
+}
+
+.sidebar .search input[type="text"] {
+  padding: 15px 0 15px 20px;
+  outline: none;
+  width: 100%;
+  height: 42px;
+  border: 1px solid #ADB3C4;
+  border-radius: 4px;
+}
+
+.sidebar .search label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+
+.sidebar nav {
+  margin-top: 30px;
+}
+
+.sidebar nav ul li {
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar nav ul li:last-child {
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul li.active a {
+  color: #F86B00;
+}
+
+.sidebar nav ul li:first-child a::after {
+  display: none;
+}
+
+.sidebar nav ul li a::after {
+  border-style: solid;
+  border-width: 2.5px 2.5px 0 0;
+  border-color: #5B697D;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  right: 0;
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  width: 0.45em;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.sidebar nav ul li.open {
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.sidebar nav ul li.open a::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.sidebar nav ul li .submenu {
+  display: none;
+}
+
+.sidebar nav ul li .submenu li {
+  margin-left: 20px;
+}
+
+.sidebar nav ul li .submenu li a {
+  color: #0E3C69;
+  font-size: 14px;
+}
+
+.sidebar nav ul li .submenu li a::after {
+  display: none;
+}
+
+.sidebar nav ul li .submenu li.active a {
+  color: orange;
 }
 /*# sourceMappingURL=sidebar.css.map */
