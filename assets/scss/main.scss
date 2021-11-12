@@ -6,8 +6,8 @@
 
 main {
     position: relative;
-    left: 220px;
-    width: calc(100% - 220px);
+    left: 320px;
+    width: calc(100% - 320px);
     height: 100%;
     top:50px;
 
@@ -51,7 +51,9 @@ main {
 
             li {
                 a {
-                    color: var(--black);
+                    color: var(--text);
+                    font-weight: 600;
+                    font-size: var(--font);
                 }
 
                 &:not(:last-child) {
@@ -107,24 +109,27 @@ main {
                 }
 
                 &:nth-child(1) {
-                    border-color: #F86B00;
+                    border-color: var(--secondary);
                 }
 
                 &:nth-child(2) {
-                    border-color: #FEC52F;
+                    border-color: var(--third);
                 }
 
                 &:nth-child(3) {
-                    border-color: #1665DB;
+                    border-color: var(--primary);
                 }
 
                 &:nth-child(4) {
-                    border-color: #35C535;
+                    border-color: var(--four);
                 }
 
                 .head {
                     display: flex;
                     justify-content: start;
+                    color: var(--black);
+                    font-weight: 600;
+                    font-size: var(--font);
 
                     .icon {
                         margin: 0 12px 0 0;
@@ -133,8 +138,16 @@ main {
 
                 .content {
                     text-align: end;
+                    color: var(--black);
 
-                    .score {}
+                    .score {
+                        font-weight: 600;
+                        font-size: var(--fontxl);
+                    }
+                    .detail {
+                        font-size: var(--fonts);
+                        font-weight: 500;
+                    }
                 }
             }
 
@@ -168,6 +181,9 @@ main {
                 .title {
                     display: flex;
                     justify-content: start;
+                    color:var(--black);
+                    font-weight: 600;
+                    font-size: var(--font);
                 }
 
                 .img {
@@ -178,6 +194,9 @@ main {
                         text-orientation: upright;
                         writing-mode: vertical-rl;
                         letter-spacing: -5px;
+                        color:var(--black);
+                        font-size: var(--fonts);
+                        font-weight: 700;
                     }
 
                     img {}

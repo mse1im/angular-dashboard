@@ -25,16 +25,46 @@ header .dashboard {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: var(--white);
+  font-size: var(--fonts);
+}
+
+header .dashboard h1 {
+  font-size: var(--fonts);
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .dashboard h1 svg {
+  margin-right: 5px;
+  width: 20px;
+  fill: var(--white);
 }
 
 header .dashboard .logo {
   margin-right: 79.66px;
   font-family: var(--logo-font), sans-serif;
-  font-size: 18px;
 }
 
 header .dashboard .logo a {
   color: var(--white);
+  font-size: var(--fontl);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .dashboard .logo a svg {
+  fill: var(--white);
+  margin-right: 5px;
 }
 
 header .dashboard .hamburger-menu {
@@ -61,7 +91,7 @@ header .dashboard .hamburger-menu span {
   position: absolute;
   height: 2px;
   width: 80%;
-  background: var(--text);
+  background: var(--white);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -117,6 +147,9 @@ header .profile {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: var(--white);
+  font-size: var(--fonts);
+  font-weight: 400;
 }
 
 header .profile .user {

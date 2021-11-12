@@ -6,13 +6,13 @@
 }
 
 html {
-  font-size: var(--fontd);
+  font-size: 10px;
   font-family: var(--body-fonts), sans-serif;
   overflow-x: hidden;
 }
 
 body {
-  font-size: var(--font);
+  font-size: 1.6rem;
   font-family: var(--body-fonts), sans-serif;
   background-color: var(--body);
   color: var(--black);
