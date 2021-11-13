@@ -33,6 +33,10 @@ header {
             margin-right: 79.66px;
             font-family: var(--logo-font), sans-serif;
 
+            @media screen and (max-width: 480px) {
+                margin-right: 0;
+            }
+
             a {
                 color:var(--white);
                 font-size: var(--fontl);
@@ -42,6 +46,10 @@ header {
                 svg {
                     fill:var(--white);
                     margin-right: 5px;
+
+                    @media screen and (max-width: 480px) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -128,6 +136,10 @@ header {
         .user {
             margin-right: 9.33px;
             text-align: end;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 }

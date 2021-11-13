@@ -11,9 +11,20 @@ main {
     height: 100%;
     top:50px;
 
+    @media screen and (max-width: 768px) {
+        left: 68px;
+        width: calc(100% - 68px);
+        filter: blur(4px);
+    }
+
     &.exp {
         left: 68px;
         width: calc(100% - 68px);
+
+        @media screen and (max-width: 768px) {
+            filter: blur(0);
+        }
+    
     }
 
     &.ng-enter {
@@ -49,6 +60,11 @@ main {
             display: flex;
             justify-content: center;
 
+            @media screen and (max-width: 540px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
             li {
                 a {
                     color: var(--text);
@@ -58,6 +74,13 @@ main {
 
                 &:not(:last-child) {
                     margin-right: 44px;
+                }
+
+                @media screen and (max-width: 540px) {
+                    margin-top:1rem;
+                    &:not(:last-child) {
+                        margin-right: 0;
+                    }
                 }
 
                 &.active {
@@ -75,6 +98,12 @@ main {
                             background-color: #F86B00;
                             left: 0;
                         }
+
+                        @media screen and (max-width: 540px) {
+                            &::after {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
@@ -83,6 +112,14 @@ main {
 
     .container {
         margin: 40px;
+
+        &.selection {
+            margin:30px 0 0 40px;
+
+            @media screen and (max-width: 480px) {
+                flex-direction: column;
+            } 
+        }
 
         .box {
             display: flex;
@@ -105,18 +142,50 @@ main {
 
                 &:nth-child(1) {
                     border-color: var(--secondary);
+
+                    .head {
+                        .icon {
+                            svg {
+                                fill:var(--secondary);
+                            }
+                        }
+                    }
                 }
 
                 &:nth-child(2) {
                     border-color: var(--third);
+
+                    .head {
+                        .icon {
+                            svg {
+                                fill:var(--third);
+                            }
+                        }
+                    }
                 }
 
                 &:nth-child(3) {
                     border-color: var(--primary);
+
+                    .head {
+                        .icon {
+                            svg {
+                                fill:var(--primary);
+                            }
+                        }
+                    }
                 }
 
                 &:nth-child(4) {
                     border-color: var(--four);
+
+                    .head {
+                        .icon {
+                            svg {
+                                fill:var(--four);
+                            }
+                        }
+                    }
                 }
 
                 .head {
@@ -208,6 +277,7 @@ main {
                     color:var(--black);
                     font-weight: 600;
                     font-size: var(--font);
+                    margin-bottom: 2rem;
                 }
 
                 .img {
@@ -223,8 +293,6 @@ main {
                         font-size: var(--fonts);
                         font-weight: 700;
                     }
-
-                    img {}
                 }
             }
 
@@ -237,6 +305,42 @@ main {
                     &:not(:last-child) {
                         margin-right: 0px;
                     }
+                }
+            }
+        }
+
+        .form-group {
+            margin-right: 2rem;
+            position: relative;
+
+            @media screen and (max-width: 480px) {
+                margin-top:2rem;
+                margin-right: 4rem;
+            } 
+
+            select {
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                height: 42px;
+                padding:0 10rem 0 1rem;
+                color:var(--text);
+                font-size: var(--fonts);
+                font-weight: 400;
+                -webkit-appearance: none;
+                width: 100%;
+                
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            label {
+                position: absolute;
+                right:10px;
+                top:25%;
+
+                svg {
+                    color:var(--border);
                 }
             }
         }

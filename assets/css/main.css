@@ -11,9 +11,25 @@ main {
   top: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  main {
+    left: 68px;
+    width: calc(100% - 68px);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+}
+
 main.exp {
   left: 68px;
   width: calc(100% - 68px);
+}
+
+@media screen and (max-width: 768px) {
+  main.exp {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
 }
 
 main.ng-enter {
@@ -72,6 +88,18 @@ main .tabs ul {
           justify-content: center;
 }
 
+@media screen and (max-width: 540px) {
+  main .tabs ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 main .tabs ul li a {
   color: var(--text);
   font-weight: 600;
@@ -80,6 +108,15 @@ main .tabs ul li a {
 
 main .tabs ul li:not(:last-child) {
   margin-right: 44px;
+}
+
+@media screen and (max-width: 540px) {
+  main .tabs ul li {
+    margin-top: 1rem;
+  }
+  main .tabs ul li:not(:last-child) {
+    margin-right: 0;
+  }
 }
 
 main .tabs ul li.active a {
@@ -97,8 +134,27 @@ main .tabs ul li.active a::after {
   left: 0;
 }
 
+@media screen and (max-width: 540px) {
+  main .tabs ul li.active a::after {
+    display: none;
+  }
+}
+
 main .container {
   margin: 40px;
+}
+
+main .container.selection {
+  margin: 30px 0 0 40px;
+}
+
+@media screen and (max-width: 480px) {
+  main .container.selection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .container .box {
@@ -140,16 +196,32 @@ main .container .box li:nth-child(1) {
   border-color: var(--secondary);
 }
 
+main .container .box li:nth-child(1) .head .icon svg {
+  fill: var(--secondary);
+}
+
 main .container .box li:nth-child(2) {
   border-color: var(--third);
+}
+
+main .container .box li:nth-child(2) .head .icon svg {
+  fill: var(--third);
 }
 
 main .container .box li:nth-child(3) {
   border-color: var(--primary);
 }
 
+main .container .box li:nth-child(3) .head .icon svg {
+  fill: var(--primary);
+}
+
 main .container .box li:nth-child(4) {
   border-color: var(--four);
+}
+
+main .container .box li:nth-child(4) .head .icon svg {
+  fill: var(--four);
 }
 
 main .container .box li .head {
@@ -275,6 +347,7 @@ main .container .box-lg li .title {
   color: var(--black);
   font-weight: 600;
   font-size: var(--font);
+  margin-bottom: 2rem;
 }
 
 main .container .box-lg li .img {
@@ -311,5 +384,43 @@ main .container .box-lg li .img span {
   main .container .box-lg li:not(:last-child) {
     margin-right: 0px;
   }
+}
+
+main .container .form-group {
+  margin-right: 2rem;
+  position: relative;
+}
+
+@media screen and (max-width: 480px) {
+  main .container .form-group {
+    margin-top: 2rem;
+    margin-right: 4rem;
+  }
+}
+
+main .container .form-group select {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  height: 42px;
+  padding: 0 10rem 0 1rem;
+  color: var(--text);
+  font-size: var(--fonts);
+  font-weight: 400;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+main .container .form-group select:focus-visible {
+  outline: none;
+}
+
+main .container .form-group label {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+}
+
+main .container .form-group label svg {
+  color: var(--border);
 }
 /*# sourceMappingURL=main.css.map */

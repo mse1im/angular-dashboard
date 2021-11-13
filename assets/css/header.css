@@ -51,6 +51,12 @@ header .dashboard .logo {
   font-family: var(--logo-font), sans-serif;
 }
 
+@media screen and (max-width: 480px) {
+  header .dashboard .logo {
+    margin-right: 0;
+  }
+}
+
 header .dashboard .logo a {
   color: var(--white);
   font-size: var(--fontl);
@@ -65,6 +71,12 @@ header .dashboard .logo a {
 header .dashboard .logo a svg {
   fill: var(--white);
   margin-right: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  header .dashboard .logo a svg {
+    display: none;
+  }
 }
 
 header .dashboard .hamburger-menu {
@@ -155,5 +167,11 @@ header .profile {
 header .profile .user {
   margin-right: 9.33px;
   text-align: end;
+}
+
+@media screen and (max-width: 768px) {
+  header .profile .user {
+    display: none;
+  }
 }
 /*# sourceMappingURL=header.css.map */
