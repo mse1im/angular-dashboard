@@ -40,4 +40,23 @@ window.addEventListener("load", () => {
             }
         })
     }
+
+    function mobileResize () {
+        if (this.innerWidth <= 768) {
+            hamburgerMenu.classList.add("open");
+            sideBar.classList.add("open")
+            main.classList.add("exp");
+            brandName.classList.add("d-none")
+            brandName.classList.remove("d-flex")
+        }else {
+            sideBar.classList.remove("open")
+            hamburgerMenu.classList.remove("open");
+            main.classList.remove("exp");
+            brandName.classList.add("d-flex")
+            brandName.classList.remove("d-none")
+        }
+    }
+    mobileResize();
+
+    this.addEventListener("resize", mobileResize)
 })
