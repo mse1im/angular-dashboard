@@ -90,7 +90,7 @@ main {
 
             li {
                 height: 190px;
-                flex-grow: 1;
+                flex:1;
                 border: 1px solid;
                 box-shadow: 0px 0px 20px #E2E3EA;
                 border-radius: 8px;
@@ -98,11 +98,6 @@ main {
                 flex-direction: column;
                 padding: 20px;
                 justify-content: space-between;
-
-                &:hover {
-                    box-shadow: none;
-                    transition: all 0.5s ease-in-out 0s;
-                }
 
                 &:not(:last-child) {
                     margin-right: 30px;
@@ -126,13 +121,34 @@ main {
 
                 .head {
                     display: flex;
-                    justify-content: start;
+                    justify-content: space-between;
                     color: var(--black);
                     font-weight: 600;
                     font-size: var(--font);
 
-                    .icon {
-                        margin: 0 12px 0 0;
+                    .left {
+                        display: flex;
+
+                        .title {
+                            margin-left:1rem;
+                            display: flex;
+                            flex-direction: column;
+
+                            span.date {
+                                font-weight: 500;
+                                color:#606989;
+                            }
+                        }
+                    }
+
+                    .rase {
+                        display: flex;
+                        align-items: center;
+                        font-size: var(--font);
+
+                        svg {
+                            color:var(--four);
+                        }
                     }
                 }
 
@@ -143,6 +159,11 @@ main {
                     .score {
                         font-weight: 600;
                         font-size: var(--fontxl);
+
+                        small {
+                            font-size: var(--fontl);
+                            margin-right: .2rem;
+                        }
                     }
                     .detail {
                         font-size: var(--fonts);
@@ -173,6 +194,9 @@ main {
                 border: 1px solid #D8D8D8;
                 border-radius: 8px;
                 padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
 
                 &:not(:last-child) {
                     margin-right: 30px;
@@ -188,6 +212,7 @@ main {
 
                 .img {
                     display: flex;
+                    align-items: center;
 
                     span {
                         margin-right: 20px;

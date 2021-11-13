@@ -18,9 +18,10 @@
 
         .search {
 
+            border-bottom: 1px solid var(--border);
+
             input[type='text'] {
                 border: none;
-                border-bottom: 1px solid var(--border);
                 border-radius: 0;
 
                 &::placeholder {
@@ -215,7 +216,7 @@
                     display: none;
 
                     li {
-                        margin-left: 20px;
+                        margin-left: 32px;
 
                         a {
                             color: var(--text);
@@ -223,6 +224,10 @@
 
                             &::after {
                                 display: none;
+                            }
+
+                            &:hover {
+                                color:var(--secondary);
                             }
                         }
 

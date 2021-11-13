@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
     let hamburgerMenu = document.querySelector(".hamburger-menu");
     let sideBar = document.querySelector(".sidebar");
     let brandName = document.querySelector(".logo");
-    let main = document.querySelector("main");
+    let main = document.querySelector(".main");
     let navElement = document.querySelector("nav").children[0].children;
     let subMenu = document.querySelector(".submenu");
     

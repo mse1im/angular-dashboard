@@ -21,9 +21,12 @@
   transition: all .3s linear;
 }
 
+.sidebar.open .search {
+  border-bottom: 1px solid var(--border);
+}
+
 .sidebar.open .search input[type='text'] {
   border: none;
-  border-bottom: 1px solid var(--border);
   border-radius: 0;
 }
 
@@ -243,7 +246,7 @@
 }
 
 .sidebar nav ul li .submenu li {
-  margin-left: 20px;
+  margin-left: 32px;
 }
 
 .sidebar nav ul li .submenu li a {
@@ -253,6 +256,10 @@
 
 .sidebar nav ul li .submenu li a::after {
   display: none;
+}
+
+.sidebar nav ul li .submenu li a:hover {
+  color: var(--secondary);
 }
 
 .sidebar nav ul li .submenu li.active a {

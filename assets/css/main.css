@@ -113,8 +113,8 @@ main .container .box {
 main .container .box li {
   height: 190px;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1;
+          flex: 1;
   border: 1px solid;
   -webkit-box-shadow: 0px 0px 20px #E2E3EA;
           box-shadow: 0px 0px 20px #E2E3EA;
@@ -130,13 +130,6 @@ main .container .box li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-main .container .box li:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
 }
 
 main .container .box li:not(:last-child) {
@@ -163,16 +156,48 @@ main .container .box li .head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: var(--black);
   font-weight: 600;
   font-size: var(--font);
 }
 
-main .container .box li .head .icon {
-  margin: 0 12px 0 0;
+main .container .box li .head .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .box li .head .left .title {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container .box li .head .left .title span.date {
+  font-weight: 500;
+  color: #606989;
+}
+
+main .container .box li .head .rase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: var(--font);
+}
+
+main .container .box li .head .rase svg {
+  color: var(--four);
 }
 
 main .container .box li .content {
@@ -183,6 +208,11 @@ main .container .box li .content {
 main .container .box li .content .score {
   font-weight: 600;
   font-size: var(--fontxl);
+}
+
+main .container .box li .content .score small {
+  font-size: var(--fontl);
+  margin-right: .2rem;
 }
 
 main .container .box li .content .detail {
@@ -220,6 +250,15 @@ main .container .box-lg li {
   border: 1px solid #D8D8D8;
   border-radius: 8px;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
 main .container .box-lg li:not(:last-child) {
@@ -242,6 +281,9 @@ main .container .box-lg li .img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .container .box-lg li .img span {
